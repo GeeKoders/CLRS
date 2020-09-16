@@ -22,9 +22,20 @@ int pow1(int m, int n){
 
 }
 
+//O(N), O(1)
+int pow2(int m, int n){
+
+    int i ;
+    int f = m ;
+    for(i=1; i<n; i++){
+        f*=m ;
+    }
+    return f ;
+}
+
 
 int main()
 {
-    int r = pow1(2, 4) ;
+    int r = pow2(3, 4) ;
     printf("%d", r);
 }
