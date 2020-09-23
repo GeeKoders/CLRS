@@ -43,13 +43,10 @@ int fibIterative(int n)
     return s;
 }
 
- int F[10] ;
+int F[10];
 
 int fibMemoization(int n)
 {
-   
-
-   
 
     if (n < 2)
     {
@@ -66,8 +63,8 @@ int fibMemoization(int n)
     {
         F[n - 1] = fibMemoization(n - 1);
     }
-    F[n] = F[n-2] + F[n-1] ;
-    return F[n-2] + F[n-1] ;
+    F[n] = F[n - 2] + F[n - 1];
+    return F[n - 2] + F[n - 1];
 }
 
 int main()
@@ -76,8 +73,9 @@ int main()
     // printf("%d", fibRecursive(4));
     // printf("%d", fibIterative(7));
 
-     for(int i=0;i<10; i++){
-        F[i] = -1 ;
+    for (int i = 0; i < 10; i++)
+    {
+        F[i] = -1;
     }
-    printf("%d", fibMemoization(5)) ;
+    printf("%d", fibMemoization(5));
 }
