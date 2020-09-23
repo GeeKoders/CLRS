@@ -14,6 +14,14 @@ int nCr(int n, int r){
     return num/den ;
 }
 
+int NCR(int n, int r){
+
+    if(r==0 || r==n) return 1 ;
+    return NCR(n-1, r-1) + NCR(n-1, r) ;
+}
+
+
 int main(){
-    printf("%d \n", nCr(5, 2)) ;
+    //  printf("%d \n", nCr(5, 2)) ;
+     printf("%d \n", NCR(4, 2)) ;
 }
